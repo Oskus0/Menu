@@ -3,12 +3,14 @@ body {
     padding: 0;
     background-color: gray;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Nagłówek */
 header {
     width: 100%;
-    height: 120px; /* normalna wysokość */
+    height: 120px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -21,13 +23,18 @@ header h1 {
     margin: 0;
 }
 
-/* Box "Tabela" */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box {
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 80px auto;
     width: 400px;
     height: 200px;
     border-radius: 15px;
@@ -40,11 +47,9 @@ header h1 {
     font-weight: bold;
 }
 
-/* Stopka */
 footer {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
     color: white;
-    font-size: 1.2em; /* większa czcionka */
+    font-size: 1.2em;
+    text-align: right;
+    padding: 10px 20px;
 }
