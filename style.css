@@ -1,15 +1,28 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background: lightgreen;
     text-align: center;
     padding: 40px 20px;
+    width: 100%;
 }
 
 header h1 {
@@ -18,10 +31,17 @@ header h1 {
     color: black;
 }
 
+main {
+    flex: 1;
+    width: 100%;
+}
+
 .class-section {
     background-color: gray;
     padding: 60px 20px;
     text-align: center;
+    width: 100%;
+    min-height: calc(100vh - 200px);
 }
 
 .class-section h2 {
@@ -35,6 +55,7 @@ header h1 {
     border-radius: 12px;
     display: inline-block;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-width: 90%;
 }
 
 .task a {
@@ -42,6 +63,8 @@ header h1 {
     color: white;
     font-size: 1.8em;
     font-weight: bold;
+    display: block;
+    padding: 10px 20px;
 }
 
 footer {
@@ -50,4 +73,29 @@ footer {
     padding: 15px;
     color: white;
     font-size: 1em;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .class-section {
+        padding: 40px 15px;
+    }
+    
+    .task {
+        padding: 25px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .task a {
+        font-size: 1.5em;
+    }
 }
